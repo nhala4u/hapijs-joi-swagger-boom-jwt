@@ -1,0 +1,29 @@
+{
+  "name": "hapijs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "boom": "^4.3.1",
+    "dotenv": "^4.0.0",
+    "glob": "^7.1.2",
+    "hapi": "^16.1.1",
+    "hapi-auth-jwt": "^4.0.0",
+    "hapi-auth-jwt2": "^7.2.4",
+    "hapi-swagger": "^7.7.0",
+    "inert": "^4.2.0",
+    "joi": "^10.5.0",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.10.4",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
