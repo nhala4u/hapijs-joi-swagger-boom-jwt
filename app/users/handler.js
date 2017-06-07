@@ -1,5 +1,6 @@
 'use strict';
 const jwt = require('jsonwebtoken');
+const Boom = require('boom');
 
 (function() {
     const _username = process.env.username;
@@ -34,11 +35,13 @@ const jwt = require('jsonwebtoken');
                     const jwtVerify = jwt.verify(jwtSign, process.env.AUTH_CLIENT_SECRET, function(err, token) {
                         if (err) {
                             console.log(err);
+                            Boom.badRequest(err, 404);
                         } else {
                             if (token.username === _username && token.password === _password) {
                                 console.log('Welcome: ' + token.username);
                             } else {
                                 console.log('Your username or Password incorrect ! Try again PRE');
+                                Boom.unauthorized('invalid password');
                             };
                         }
                     });
